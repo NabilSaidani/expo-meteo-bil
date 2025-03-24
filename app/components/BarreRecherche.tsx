@@ -40,7 +40,7 @@ export const BarreRecherche: React.FC<BarreRechercheProps> = ({
                 <View style={styles.resultsContainer}>
                     {searchResults.map((city) => (
                         <TouchableOpacity
-                            key={`${city.name}-${city.country}`}
+                        key={`${city.name}-${city.country}-${Math.random().toString(36).substr(2, 9)}`}
                             style={styles.resultItem}
                             onPress={() => onSelectCity(city)}
                         >
@@ -53,6 +53,8 @@ export const BarreRecherche: React.FC<BarreRechercheProps> = ({
         </View>
     );
 };
+
+export default BarreRecherche;
 
 const styles = StyleSheet.create({
     container: {

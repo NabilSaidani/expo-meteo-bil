@@ -24,6 +24,8 @@ export const WeatherCard: React.FC<WeatherCardProps> = ({ weather }) => {
     );
 };
 
+export default WeatherCard;
+
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#ffffff',
